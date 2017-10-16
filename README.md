@@ -1,5 +1,4 @@
 # fat32-minix
-FAT32 for MINIX 3
 
 A service for MINIX 3 that allows inspection of FAT32 partitions, written as Operating Systems course project with [Ognjen Djuricic](https://github.com/ogigoc).
 
