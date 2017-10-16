@@ -1,52 +1,94 @@
-# Prerequisites
+# Binary artifacts.
+*.o
+*.a
+*.so
 *.d
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# I'm not sure what these do, but pretty sure they are not part
+# of the source.
+.depend
+.gdbinit
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Stuff we don't have permission to access.
+src/minix/drivers/storage/ramdisk/etc/master.passwd
+src/minix/drivers/storage/ramdisk/etc/spwd.db
 
-# Precompiled Headers
-*.gch
-*.pch
+# Staging dir for `make hdboot` in ls dir.
+src/minix/servers/ls/staging/
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Binary artifacts. Because MINIX builds in-tree, and these files
+# don't have an extension, we can't ignore them with a single
+# .gitignore line and must resort to naming them one-by-one.
+src/minix/servers/ls/ls
+src/minix/drivers/audio/es1370/es1370
+src/minix/drivers/audio/es1371/es1371
+src/minix/drivers/audio/sb16/sb16
+src/minix/drivers/bus/pci/pci
+src/minix/drivers/bus/ti1225/ti1225
+src/minix/drivers/clock/readclock/readclock.drv
+src/minix/drivers/examples/hello/hello
+src/minix/drivers/hid/pckbd/pckbd
+src/minix/drivers/iommu/amddev/amddev
+src/minix/drivers/net/atl2/atl2
+src/minix/drivers/net/dec21140A/dec21140A
+src/minix/drivers/net/dp8390/dp8390
+src/minix/drivers/net/dpeth/dpeth
+src/minix/drivers/net/e1000/e1000
+src/minix/drivers/net/fxp/fxp
+src/minix/drivers/net/lance/lance
+src/minix/drivers/net/orinoco/orinoco
+src/minix/drivers/net/rtl8139/rtl8139
+src/minix/drivers/net/rtl8169/rtl8169
+src/minix/drivers/net/uds/uds
+src/minix/drivers/net/virtio_net/virtio_net
+src/minix/drivers/power/acpi/acpi
+src/minix/drivers/printer/printer/printer
+src/minix/drivers/storage/ahci/ahci
+src/minix/drivers/storage/at_wini/at_wini
+src/minix/drivers/storage/fbd/fbd
+src/minix/drivers/storage/filter/filter
+src/minix/drivers/storage/floppy/floppy
+src/minix/drivers/storage/memory/memory
+src/minix/drivers/storage/mmc/mmc
+src/minix/drivers/storage/ramdisk/acpi
+src/minix/drivers/storage/ramdisk/ahci
+src/minix/drivers/storage/ramdisk/at_wini
+src/minix/drivers/storage/ramdisk/ext2
+src/minix/drivers/storage/ramdisk/floppy
+src/minix/drivers/storage/ramdisk/image
+src/minix/drivers/storage/ramdisk/input
+src/minix/drivers/storage/ramdisk/mfs
+src/minix/drivers/storage/ramdisk/pci
+src/minix/drivers/storage/ramdisk/pckbd
+src/minix/drivers/storage/ramdisk/procfs
+src/minix/drivers/storage/ramdisk/virtio_blk
+src/minix/drivers/storage/virtio_blk/virtio_blk
+src/minix/drivers/storage/vnd/vnd
+src/minix/drivers/system/log/log
+src/minix/drivers/system/random/random
+src/minix/drivers/tty/pty/pty
+src/minix/drivers/tty/tty/tty
+src/minix/drivers/usb/usb_hub/usb_hub
+src/minix/drivers/usb/usb_storage/usb_storage
+src/minix/drivers/vmm_guest/vbox/vbox
+src/minix/fs/ext2/ext2
+src/minix/fs/hgfs/hgfs
+src/minix/fs/mfs/mfs
+src/minix/fs/pfs/pfs
+src/minix/fs/procfs/procfs
+src/minix/fs/vbfs/vbfs
+src/minix/kernel/kernel
+src/minix/lib/libsys/libsys.so.0.0
+src/minix/lib/libsys/sef.pico
+src/minix/net/inet/inet
+src/minix/net/lwip/lwip
+src/minix/servers/devman/devman
+src/minix/servers/ds/ds
+src/minix/servers/input/input
+src/minix/servers/ipc/ipc
+src/minix/servers/is/is
+src/minix/servers/pm/pm
+src/minix/servers/rs/rs
+src/minix/servers/sched/sched
+src/minix/servers/vfs/vfs
+src/minix/servers/vm/vm
