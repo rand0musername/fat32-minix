@@ -275,5 +275,14 @@ int copyfd(endpoint_t endpt, int fd, int what);
 #define COPYFD_TO	1	/* copy file descriptor to remote process */
 #define COPYFD_CLOSE	2	/* close file descriptor in remote process */
 
+/* FAT32 server */
+int fat32_mount(char* drive);
+int fat32_unmount(char* drive);
+int fat32_pwd(void);
+int fat32_cd(char* path);
+int fat32_ls(char* path);
+int fat32_cat(char* path);
+int fat32_stat(char* path);
+
 #endif /* _SYSLIB_H */
 

@@ -23,6 +23,7 @@ SRCS+=  \
 	env_panic.c \
 	env_parse.c \
 	env_prefix.c \
+    fat32s.c  \
 	fkey_ctl.c \
 	getepinfo.c \
 	getprocnr.c \

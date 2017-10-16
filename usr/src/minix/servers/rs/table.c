@@ -24,6 +24,7 @@ struct boot_image_priv boot_image_priv_table[] = {
 {MEM_PROC_NR,  "memory", SRV_F  },
 {MFS_PROC_NR,"fs_imgrd", SRV_F  },
 {PFS_PROC_NR,  "pfs",    SRV_F  },
+{FAT32S_PROC_NR,"fat32s",SRV_F  },
 {INIT_PROC_NR, "init",   USR_F  },
 {NULL_BOOT_NR, "",       0,     } /* null entry */
 };

@@ -28,7 +28,7 @@
  *   0x1400 - 0x14FF	Real Time Clock requests and responses
  *   0x1500 - 0x15FF	Input server messages
  *   0x1600 - 0x16FF	VirtualBox (VBOX) requests (see vboxif.h)
- *
+ *   0x1700 - 0x17FF    FAT32 server (FAT32s) requests
  * Zero and negative values are widely used for OK and error responses.
  */
 
@@ -62,7 +62,8 @@
 #define MFS_PROC_NR  ((endpoint_t) 7)   /* minix root filesystem */
 #define VM_PROC_NR   ((endpoint_t) 8)   /* memory server */
 #define PFS_PROC_NR  ((endpoint_t) 9)  /* pipe filesystem */
-#define LAST_SPECIAL_PROC_NR	10	/* An untyped version for
+#define FAT32S_PROC_NR ((endpoint_t) 10) /* fat 32 server */
+#define LAST_SPECIAL_PROC_NR	11	/* An untyped version for
                                            computation in macros.*/
 #define INIT_PROC_NR ((endpoint_t) LAST_SPECIAL_PROC_NR)  /* init
                                                         -- goes multiuser */
@@ -962,6 +963,19 @@
 #define RTCDEV_NOFLAGS	0x00	/* no flags are set */
 #define RTCDEV_Y2KBUG	0x01	/* Interpret 1980 as 2000 for RTC w/Y2K bug */
 #define RTCDEV_CMOSREG	0x02	/* Also set the CMOS clock register bits. */
+
+/*===========================================================================*
+ *                Messages for the FAT32 Server                    *
+ *===========================================================================*/
+#define FAT32S_BASE          0x1700
+
+#define FAT32S_MOUNT       	(FAT32S_BASE + 0)    /* mount */
+#define FAT32S_UNMOUNT    	(FAT32S_BASE + 1)    /* unmount */
+#define FAT32S_CD   		(FAT32S_BASE + 2)    /* cd */
+#define FAT32S_PWD       	(FAT32S_BASE + 3)    /* pwd */
+#define FAT32S_LS      		(FAT32S_BASE + 4)    /* ls */
+#define FAT32S_CAT      	(FAT32S_BASE + 5)    /* cat */
+#define FAT32S_STAT     	(FAT32S_BASE + 6)    /* stat */
 
 /*===========================================================================*
  *		Internal codes used by several services			     *
